@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
-
-import 'package:eco_steps/leaderboard/LeaderboardScreen.dart';
-import 'package:eco_steps/profile/ProfileScren.dart';
+import 'package:eco_steps/leaderboard/leaderboard_screen.dart';
+import 'package:eco_steps/profile/profile_screen.dart';
 import 'package:eco_steps/search/SearchScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -16,11 +15,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-  
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(scaffoldBackgroundColor: Colors.grey[100]),
       home: MyBottomNavigationBar(),
     );
   }
@@ -34,17 +31,6 @@ class MyBottomNavigationBar extends StatefulWidget {
 }
 
 class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
-  // @override
-  // void initState(){
-  //   super.initState();
-  //   goToOnboarding(context);
-  // }
-  // // goToOnboarding(context);
-  //
-  // void goToOnboarding(context) => Navigator.of(context).pushReplacement(
-  //   MaterialPageRoute(builder:(_) => OnboardingScreen()),
-  // );
-
   int _currentIndex = 0;
   final List<Widget> _children = [
     ProfileScreen(),
@@ -56,18 +42,10 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: _children[_currentIndex],
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            onTabTapped(2);
-          },
-          tooltip: "Add Food",
-          child: Icon(Icons.add_circle_rounded,
-              color: Colors.greenAccent[200], size: 55),
-          elevation: 0.5,
-          backgroundColor: Colors.white,
-        ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomNavigationBar(
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
           type: BottomNavigationBarType.fixed,
           backgroundColor: Colors.white,
           selectedItemColor: Colors.black,
@@ -86,8 +64,9 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
             ),
             BottomNavigationBarItem(
               label: 'Recipes',
-              icon: Icon(Icons.search,
-            ),
+              icon: Icon(
+                Icons.search,
+              ),
             ),
             BottomNavigationBarItem(
               label: 'Saviours',
