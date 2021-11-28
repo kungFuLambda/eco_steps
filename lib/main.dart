@@ -1,8 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:eco_steps/leaderboard/leaderboard_screen.dart';
 import 'package:eco_steps/profile/profile_screen.dart';
-import 'package:eco_steps/search/SearchScreen.dart';
+
+import 'package:eco_steps/search/search_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'search/search_screen.dart';
 
 void main() {
   runApp(const MyApp());
