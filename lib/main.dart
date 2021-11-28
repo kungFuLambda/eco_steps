@@ -4,6 +4,7 @@ import 'package:eco_steps/leaderboard/LeaderboardScreen.dart';
 import 'package:eco_steps/profile/ProfileScren.dart';
 import 'package:eco_steps/search/SearchScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-  
         primarySwatch: Colors.blue,
       ),
       home: MyBottomNavigationBar(),
@@ -86,8 +86,9 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
             ),
             BottomNavigationBarItem(
               label: 'Recipes',
-              icon: Icon(Icons.search,
-            ),
+              icon: Icon(
+                Icons.search,
+              ),
             ),
             BottomNavigationBarItem(
               label: 'Saviours',
