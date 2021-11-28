@@ -19,7 +19,6 @@ class SearchScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Text('search'),
           Expanded(
             child: ListView(
               children: widgets,
@@ -31,11 +30,28 @@ class SearchScreen extends StatelessWidget {
   }
 
   List<Widget> generateDummies(height) {
-    List<Widget> ret = [];
+    List<Widget> ret = [
+      Container(
+        height: 50,
+        width: double.infinity,
+        padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+        child: Row(
+          children: [
+            Icon(Icons.search),
+            SizedBox(
+              width: 5,
+            ),
+            Expanded(child: Text('Search')),
+            Align(alignment: Alignment.centerRight, child: Icon(Icons.qr_code))
+          ],
+        ),
+      ),
+    ];
     for (int i = 0; i < 5; i++) {
       ret.add(TripleItem());
-      ret.add(SingleItem());
+
       ret.add(DoubleItem());
+      ret.add(SingleItem());
     }
     return ret;
   }

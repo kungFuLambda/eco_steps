@@ -14,6 +14,7 @@ class SingleItem extends StatelessWidget {
                 'assets/waves.jpg',
               ),
               fit: BoxFit.cover)),
+      margin: EdgeInsets.fromLTRB(0, 5, 0, 5),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class DoubleItem extends StatelessWidget {
   const DoubleItem({Key? key}) : super(key: key);
@@ -7,21 +8,10 @@ class DoubleItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(children: [
       Expanded(
-        flex: 1,
-        child: Container(
-          height: MediaQuery.of(context).size.width / 4,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(
-                    'assets/waves.jpg',
-                  ),
-                  fit: BoxFit.cover)),
-        ),
-      ),
-      Expanded(
         flex: 2,
         child: Container(
-          height: MediaQuery.of(context).size.width / 4,
+          padding: EdgeInsets.fromLTRB(0, 5, 5, 5),
+          height: MediaQuery.of(context).size.height / 5,
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(
@@ -30,6 +20,25 @@ class DoubleItem extends StatelessWidget {
                   fit: BoxFit.cover)),
         ),
       ),
+      SizedBox(
+        width: 5,
+      ),
+      Expanded(
+        flex: 3,
+        child: Container(
+          padding: EdgeInsets.all(20),
+          height: MediaQuery.of(context).size.height / 5,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage(
+                    'assets/waves.jpg',
+                  ),
+                  fit: BoxFit.cover)),
+        ),
+      ),
+      SizedBox(
+        height: 5,
+      )
     ]);
   }
 }

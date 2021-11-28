@@ -7,39 +7,47 @@ class TripleItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(children: [
       Expanded(
-          flex: 1,
+          flex: 2,
           child: Column(
             children: [
               Container(
-                height: MediaQuery.of(context).size.width / 8,
+                height: MediaQuery.of(context).size.height / 6,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage(
                           'assets/waves.jpg',
                         ),
-                        fit: BoxFit.cover)),
+                        fit: BoxFit.fill)),
+              ),
+              SizedBox(
+                height: 5,
               ),
               Container(
-                height: MediaQuery.of(context).size.width / 8,
+                height: MediaQuery.of(context).size.height / 6 - 5,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage(
                           'assets/waves.jpg',
                         ),
                         fit: BoxFit.cover)),
+                margin: EdgeInsets.fromLTRB(0, 0, 0, 5),
               ),
             ],
           )),
+      SizedBox(
+        width: 5,
+      ),
       Expanded(
-        flex: 2,
+        flex: 3,
         child: Container(
-          height: MediaQuery.of(context).size.width / 4,
+          height: MediaQuery.of(context).size.height / 3,
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(
                     'assets/waves.jpg',
                   ),
                   fit: BoxFit.cover)),
+          margin: EdgeInsets.fromLTRB(0, 0, 0, 5),
         ),
       ),
     ]);
