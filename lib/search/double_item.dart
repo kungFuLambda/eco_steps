@@ -15,7 +15,7 @@ class DoubleItem extends StatelessWidget {
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(
-                    'assets/waves.jpg',
+                    'assets/panda.jpg',
                   ),
                   fit: BoxFit.cover)),
         ),
@@ -31,7 +31,7 @@ class DoubleItem extends StatelessWidget {
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(
-                    'assets/waves.jpg',
+                    'assets/bus.jpg',
                   ),
                   fit: BoxFit.cover)),
         ),

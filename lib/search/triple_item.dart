@@ -15,7 +15,7 @@ class TripleItem extends StatelessWidget {
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage(
-                          'assets/waves.jpg',
+                          'assets/walking.jpg',
                         ),
                         fit: BoxFit.fill)),
               ),
@@ -27,7 +27,7 @@ class TripleItem extends StatelessWidget {
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage(
-                          'assets/waves.jpg',
+                          'assets/trees.jpg',
                         ),
                         fit: BoxFit.cover)),
                 margin: EdgeInsets.fromLTRB(0, 0, 0, 5),

@@ -11,7 +11,7 @@ class SingleItem extends StatelessWidget {
       decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage(
-                'assets/waves.jpg',
+                'assets/whale.jpg',
               ),
               fit: BoxFit.cover)),
       margin: EdgeInsets.fromLTRB(0, 5, 0, 5),
